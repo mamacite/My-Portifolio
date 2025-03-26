@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease; /* Transition for link color */
+        }
+        nav a:hover {
+            color: #ffcc00; /* Change color on hover */
+        }
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(20px); /* Start slightly lower */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for visibility */
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        .project {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.3s ease; /* Transition for project hover */
+        }
+        .project:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease; /* Transition for input focus */
+        }
+        form input:focus, form textarea:focus {
+            border-color: #ffcc00; /* Change border color on focus */
+        }
+        form button {
+            padding: 0.5rem;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease; /* Transition for button hover */
+        }
+        form button:hover {
+            background: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+        .profile-picture {
+            width: 150px; /* Adjust the size as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Circle shape */
+            display: block; /* Center the image */
+            margin: 0 auto 1rem; /* Space below the image */
+            transition: transform 0.3s ease; /* Transition for image hover */
+        }
+        .profile-picture:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+        .about-paragraph {
+            font-size: 1rem; /* Adjust font size */
+            line-height: 1.5; /* Improve line spacing */
+            color: #333; /* Dark gray color for better contrast */
+            margin-top: 1rem; /* Space above the paragraph */
+            margin-bottom: 1rem; /* Space below the paragraph */
+        }
+        .skills-list {
+            list-style-type: none; /* Remove bullets */
+            padding: 0;
+        }
+        .testimonial {
+            border-left: 4px solid #333;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        /* Animation for sections entering the viewport */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .show {
+            animation: fadeInUp 0.5s forwards; /* Apply the fade-in animation */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#comment">Comment</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="photo_2024-06-11_17-17-02.jpg" alt="Nezif Tayib" class="profile-picture">
+    <p class="about-paragraph">Hello! I am a web developer with a passion for creating beautiful and functional websites. 
+        I love coding and learning new technologies.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Student Management</h3>
+        <p>A brief description of the project goes here.</p>
+        <a href="#">View Project</a>
+    </div>
+    <div class="project">
+        <h3>School Management</h3>
+        <p>A brief description of the project goes here.</p>
+        <a href="#">View Project</a>
+    </div>
+    <div class="project">
+        <h3>Football Management</h3>
+        <p>A brief description of the project goes here.</p>
+        <a href="#">View Project</a>
+    </div>
+    <div class="project">
+        <h3>Network Management</h3>
+        <p>A brief description of the project goes here.</p>
+        <a href="#">View Project</a>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Python</li>
+    </ul>
+</section>
+
+<section id="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote class="testimonial">
+        <p>"Nezif is an outstanding developer who consistently goes above and beyond."</p>
+        <footer>- Client Name</footer>
+    </blockquote>
+    <blockquote class="testimonial">
+        <p>"Working with Nezif was a fantastic experience. Highly recommended!"</p>
+        <footer>- Colleague Name</footer>
+    </blockquote>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Your Name" required>
+        <input type="email" id="contact-email" placeholder="Your Email" required>
+        <textarea id="contact-message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="response-message" style="display:none;"></p>
+</section>
+
+<section id="comment">
+    <h2>Comment Me</h2>
+    <form id="comment-form">
+        <input type="text" id="comment-name" placeholder="Your Name" required>
+        <input type="email" id="comment-email" placeholder="Your Email" required>
+        <textarea id="comment-text" rows="4" placeholder="Your comment" required></textarea>
+        <button type="submit">Send Comment</button>
+    </form>
+    <p id="response-comment" style="display:none;"></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 All right Reserved!</p>
+    <div class="social-links">
+        <a href="https://github.com/mamacite" target="_blank">GitHub</a> |
+        
+    </div>
+</footer>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const email = document.getElementById('contact-email').value;
+        const message = document.getElementById('contact-message').value;
+
+        // Simulate form submission
+        const responseMessage = document.getElementById('response-message');
+        responseMessage.style.display = 'block';
+        responseMessage.textContent = `Thank you, ${name}! Your message has been sent.`;
+        responseMessage.style.color = 'green';
+
+        // Clear the form
+        this.reset();
+    });
+
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('comment-name').value;
+        const email = document.getElementById('comment-email').value;
+        const comment = document.getElementById('comment-text').value;
+
+        // Simulate form submission
+        const responseComment = document.getElementById('response-comment');
+        responseComment.style.display = 'block';
+        responseComment.textContent = `Thank you, ${name}! Your comment has been sent.`;
+        responseComment.style.color = 'blue';
+
+        // Clear the form
+        this.reset();
+    });
+
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+
+        const options = {
+            root: null,
+            threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show'); // Add the class to trigger the animation
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+</body>
+</html>
