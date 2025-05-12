@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <meta name="description" content="Portfolio of Nezif Tayib, a web developer showcasing projects like To-Do List, Chat App, and Expense Tracker.">
+    <meta name="keywords" content="Nezif Tayib, web developer, portfolio, To-Do List, Chat App, Expense Tracker">
+    <meta property="og:title" content="My Portfolio">
+    <meta property="og:description" content="Explore my projects and skills as a web developer.">
+    <meta property="og:image" content="photo_2024-06-11_17-17-02.jpg"> 
+    <meta property="og:url" content="https://github.com/mamacite"> 
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#comment">Comment</a>
+        <a href="#blog">Blog</a>
+        <a href="#resume">Resume</a>
+    </nav>
+</header>
+
+<div id="progressBar"></div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="photo_2024-06-11_17-17-02.jpg" alt="Nezif Tayib" class="profile-picture">
+    <p class="about-paragraph">Hello! I am a web developer with a passion for creating beautiful and functional websites. 
+        I love coding and learning new technologies.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="carousel">
+        <div class="carousel-item active">
+            <h3>To-Do List App</h3>
+            <p>A user-friendly application that allows you to manage tasks efficiently. Users can add, edit, and delete tasks.</p>
+            <button class="modal-btn">More Info</button>
+        </div>
+        <div class="carousel-item">
+            <h3>Chat Application</h3>
+            <p>A real-time chat application with WebSocket support, allowing for private messaging and group chats.</p>
+            <button class="modal-btn">More Info</button>
+        </div>
+        <div class="carousel-item">
+            <h3>Expense Tracker</h3>
+            <p>This app helps users track income and expenses, with visualizations for spending habits.</p>
+            <button class="modal-btn">More Info</button>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Python</li>
+    </ul>
+</section>
+
+<section id="testimonials">
+    <h2>Testimonials</h2>
+    <form id="testimonial-form">
+        <input type="text" placeholder="Your Name" required>
+        <textarea placeholder="Your Testimonial" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="testimonial-list"></div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Your Name" required>
+        <input type="email" id="contact-email" placeholder="Your Email" required>
+        <textarea id="contact-message" rows="4" placeholder="Your Message" required></textarea>
+        <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="response-message" style="display:none;"></p>
+</section>
+
+<section id="comment">
+    <h2>Comment Me</h2>
+    <form id="comment-form">
+        <input type="text" id="comment-name" placeholder="Your Name" required>
+        <input type="email" id="comment-email" placeholder="Your Email" required>
+        <textarea id="comment-text" rows="4" placeholder="Your comment" required></textarea>
+        <button type="submit">Send Comment</button>
+    </form>
+    <p id="response-comment" style="display:none;"></p>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+    <article>
+        <h3>Understanding JavaScript Promises</h3>
+        <p>A deep dive into JavaScript promises, how they work, and why they are essential for modern web development.</p>
+        <a href="link_to_full_article">Read More</a>
+    </article>
+    <article>
+        <h3>CSS Grid vs Flexbox</h3>
+        <p>An overview of CSS Grid and Flexbox, comparing their use cases and when to choose one over the other.</p>
+        <a href="link_to_full_article">Read More</a>
+    </article>
+</section>
+
+<section id="resume">
+    <h2>Download My Resume</h2>
+    <a href="path/to/resume.pdf" download>Download Resume</a>
+</section>
+
+<footer>
+    <p>&copy; 2025 All rights Reserved!</p>
+    <div class="social-links">
+        <a href="https://github.com/mamacite" target="_blank">GitHub</a>
+        
+    </div>
+    <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
